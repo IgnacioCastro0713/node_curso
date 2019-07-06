@@ -27,6 +27,7 @@ const save = (json, msg = true) => {
 }
 
 const list = () => {
+
     listToDo = db();
 
     console.log('Lista de tareas:'.magenta);
@@ -58,7 +59,7 @@ const create = (description) => {
 
 }
 
-let update = (description, complete = true) => {
+const update = (description, complete = true) => {
 
     listToDo = db();
 
@@ -74,7 +75,7 @@ let update = (description, complete = true) => {
 
 }
 
-let destroy = (description) => {
+const destroy = (description) => {
 
     listToDo = db();
 
