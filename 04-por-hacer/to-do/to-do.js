@@ -45,7 +45,6 @@ const create = (description) => {
         return;
     }
 
-    //Load db
     listToDo = db();
 
     let toDo = {
@@ -96,4 +95,4 @@ module.exports = {
     create,
     update,
     destroy
-}
+};
