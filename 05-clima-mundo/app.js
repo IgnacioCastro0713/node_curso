@@ -28,5 +28,5 @@ getInfo(argv.direction)
     .then(res => {
         console.log(`EL clima de ${res.place} es de ${res.weather} °C`);
     }).catch(err => {
-        if (err) console.log(`No se puedo determinar el clima de ${argv.direction}`)
+        console.log(err.message);
     });
