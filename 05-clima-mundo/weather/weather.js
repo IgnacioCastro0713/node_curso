@@ -8,5 +8,5 @@ const getWeather = async(lat, lon) => {
 };
 
 module.exports = {
-    
+    getWeather
 }
