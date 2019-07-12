@@ -5,7 +5,7 @@ let listToDo = [];
 
 const db = () => {
     try {
-        return require('../db/data.json');
+        return require('../db/data.json.js');
     } catch (error) {
         return [];
     }
