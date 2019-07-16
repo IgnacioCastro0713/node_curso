@@ -4,53 +4,28 @@ const bodyParser = require('body-parser');
 
 
 const app = express();
+const mongoose = require('mongoose');
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+//Midlewares
+app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
+app.use(bodyParser.json()); // parse application/json
 
-// parse application/json
-app.use(bodyParser.json());
-
-app.get('/user', (req, res) => {
-    res.json({
-        name: 'Ignacio'
-    });
-});
-
-app.post('/user', (req, res) => {
-
-    let body = req.body
-
-    if (body.name === undefined) {
-
-        res.status(400).json({
-            ok: false,
-            message: 'EL nombre es necesario'
-        })
-
-    } else {
-
-        res.json({
-            body
-        });
-    }
+//Routes
+app.use(require('../routes/user'));
 
 
+//mongo db connection
+mongoose.connect('mongodb://localhost:27017/cafe', {useNewUrlParser: true}, (err, res) => {
 
+    if (err) throw err
+
+    console.log('Connect to database');
 
 });
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
-app.put('/user/:id', (req, res) => {
-
-    let id = req.param.id;
-
-    console.json('put user');
-});
-
-app.delete('/user', (req, res) => {
-    console.json('delete user');
-});
-
+//Port
 app.listen(process.env.PORT, () => {
-    console.log('Port 8080 working');
+    console.log('Port 3000 working');
 });
