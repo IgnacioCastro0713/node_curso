@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
 
-//Midlewares
+// Middleware's
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
 
