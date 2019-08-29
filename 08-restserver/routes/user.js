@@ -58,7 +58,7 @@ app.put('/user/:id', (req, res) => {
     let id = req.param.id;
 
     let body = _.pick(req.body, ['name', 'email', 'img', 'role', 'status']);
-
+    //comment
     User.findOneAndUpdate(id, body, {
         new: true,
         runValidators: true,
