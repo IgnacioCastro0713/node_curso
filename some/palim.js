@@ -1,4 +1,4 @@
-function quitSpaces(str) {
+const quitSpaces = (str) => {
   let result = "";
   let arrayA = str.split(" ");
 
@@ -6,9 +6,9 @@ function quitSpaces(str) {
     if (arrayA[i] !== "") result += arrayA[i];
   }
   return result;
-}
+};
 
-function palindrome(string) {
+const palindrome = (string) => {
   let str = quitSpaces(string);
 
   let len = str.length;
@@ -19,6 +19,6 @@ function palindrome(string) {
     }
   }
   return true;
-}
+};
 
 console.log(palindrome("anita lava la tina"));
