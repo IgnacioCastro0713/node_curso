@@ -9,6 +9,7 @@ function quitSpaces(str) {
   return result;
 }
 
+
 function palindrome(string) {
 
   let str = quitSpaces(string);
