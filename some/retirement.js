@@ -7,11 +7,20 @@ const jubilacion = (fechaNacimiento, nombre) => {
   return `A ${nombre} le faltan ${65 - edad} años para su retiro.`;
 };
 
-console.log("Edad : " + calcularEdad(1995));
-console.log(jubilacion(1995, "Ignacio"));
+// console.log("Edad : " + calcularEdad(1995));
+// console.log(jubilacion(1995, "Ignacio"));
 
-function ejemplo1() {}
+// function ejemplo1() {}
 
-const ejemplo2 = function() {};
+// const ejemplo2 = function() {};
 
-const ejemplo3 = () => {};
+// const ejemplo3 = () => {};
+
+var currentAge = 23;
+
+function retirement(retirementYear, name) {
+  var endRetirenment = retirementYear - currentAge;
+  return "A " + name + " le faltan " + endRetirenment + " años para su retiro";
+}
+
+console.log(retirement(65, "Miriam"));
