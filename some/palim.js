@@ -1,4 +1,4 @@
-const quitSpaces = (str) => {
+const quitSpaces = str => {
   let result = "";
   let arrayA = str.split(" ");
 
@@ -8,7 +8,7 @@ const quitSpaces = (str) => {
   return result;
 };
 
-const palindrome = (string) => {
+const palindrome = string => {
   let str = quitSpaces(string);
 
   let len = str.length;
